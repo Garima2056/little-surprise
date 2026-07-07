@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#ffe6f2,#fff8fb);
+
+    font-family:'Poppins',sans-serif;
+}
+
+.container{
+    width: 440px;
+    background: linear-gradient(135deg,#df94b8,#fff8fb);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 15px 40px rgba(255,105,180,.25);
+}
+h1{
+    font-family:'Pacifico', cursive;
+    color:#56042a;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+p{
+
+    color:#330202;
+
+    margin-bottom:20px;
+
+}
+.pin-display{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.dot{
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid #ff8ec7;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+.keypad{
+    display:grid;
+    grid-template-columns:repeat(3,70px);
+    gap:15px;
+    justify-content:center;
+    margin-top:10px;
+}
+.key,
+#backspace{
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#c40662;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    box-shadow:0 5px 15px rgba(255,105,180,.25);
+
+}
+
+.key:hover,
+#backspace:hover{
+
+    background:#d84b92;
+
+    transform:scale(1.08);
+
+}
+.empty{
+
+    visibility:hidden;
+
+}
+#message{
+
+    margin-top:20px;
+
+    font-weight:600;
+
+}
+
+button:hover{
+
+    background:#ff4da6;
+
+}
+.scene{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg,#ffe6f2,#fff7fb);
+}
+
+/* Hidden */
+
+.hidden{
+    display:none !important;
+}
+/* Heart Scene */
+
+#heartScene{
+    z-index:100;
+
+}
+/* Big Heart */
+
+.big-heart{
+
+    font-size:110px;
+
+    color:#ff4d94;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+/* Text */
+
+.heart-text{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#ff4d94;
+
+    font-family:'Pacifico',cursive;
+
+}
+
+/* Heart Beat */
+
+@keyframes heartbeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.2);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+.floating-hearts{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.floating-hearts span{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    color:#ff7eb6;
+
+    font-size:25px;
+
+    animation:floatHeart 8s linear infinite;
+
+    opacity:.7;
+
+}
+.floating-hearts span:nth-child(1){left:8%; animation-delay:0s;}
+.floating-hearts span:nth-child(2){left:20%; animation-delay:1s;}
+.floating-hearts span:nth-child(3){left:35%; animation-delay:2s;}
+.floating-hearts span:nth-child(4){left:50%; animation-delay:3s;}
+.floating-hearts span:nth-child(5){left:65%; animation-delay:4s;}
+.floating-hearts span:nth-child(6){left:78%; animation-delay:2s;}
+.floating-hearts span:nth-child(7){left:88%; animation-delay:5s;}
+.floating-hearts span:nth-child(8){left:95%; animation-delay:1.5s;}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0) scale(.6);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ---------- Cat Scene ---------- */
+
+#catTulips{
+    width:320px;
+    animation:catFloat 2s ease-in-out infinite;
+}
+
+@keyframes catFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+.cat-text{
+
+    margin-top:25px;
+
+    font-size:28px;
+
+    font-family:'Pacifico',cursive;
+
+    color:#d63384;
+
+}
+
+.cat-text2{
+
+    margin-top:12px;
+
+    font-size:18px;
+
+    color:#6b4c57;
+
+}
+
+/* Pop Animation */
+
+@keyframes catPop{
+
+    0%{
+
+        transform:scale(.3);
+
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+#questionBox{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.choice-buttons{
+
+    margin-top:20px;
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+}
+
+#yesBtn,
+#noBtn{
+
+    padding:12px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    background:#ff69b4;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+#yesBtn:hover,
+#noBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* Envelope */
+
+#envelope{
+
+    width:260px;
+
+    cursor:pointer;
+
+    animation:floatEnvelope 2s ease-in-out infinite;
+}
+
+.envelope-text{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    color:#d63384;
+
+    font-family:'Pacifico',cursive;
+
+}
+
+@keyframes floatEnvelope{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* NO Button Reaction */
+
+.no-message{
+
+    font-family:'Pacifico', cursive;
+    color:#d63384;
+    font-size:45px;
+    animation:noPop .5s ease;
+
+}
+
+
+.no-image{
+
+    width:250px;
+    margin-top:20px;
+    animation:noPop .5s ease;
+
+}
+
+
+@keyframes noPop{
+
+    0%{
+        transform:scale(.3);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+#letter {
+
+    background: rgb(218, 184, 209);
+
+    width: 400px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    animation: openLetter 1s ease;
+
+}
+
+
+#letter h1 {
+
+    color: #880341;
+
+}
+
+
+#letter p {
+
+    color: #060000;
+
+    line-height: 1.6;
+
+}
+
+
+
+@keyframes openLetter {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.5);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}

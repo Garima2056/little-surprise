@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>I Made Something For You..</h1>
+
+        <p>Enter your secret PIN</p>
+
+        <div class="pin-display">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- Hidden input (JavaScript will use it later) -->
+        <input type="password" id="password" hidden>
+
+        <div class="keypad">
+
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+
+            <button class="empty"></button>
+            <button class="key">0</button>
+            <button id="backspace">⌫</button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+<div id="heartScene" class="scene hidden">
+
+    <div class="big-heart">❤</div>
+
+    <p class="heart-text">
+        Unlocking your surprise...
+    </p>
+
+    <div class="floating-hearts">
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+    </div>
+
+</div>
+
+<div id="catScene" class="scene hidden">
+
+    <img src="tulips.png" id="catTulips">
+
+    <p class="cat-text">
+        These are for you.
+    </p>
+
+    <p class="cat-text2">
+        I hope they make you smile.
+    </p>
+
+</div>
+
+
+<div id="questionScene" class="scene hidden">
+
+    <h1>One more thing...</h1>
+
+    <p>Do you want to see it?</p>
+
+    <div class="choice-buttons">
+
+        <button id="yesBtn">YES</button>
+
+        <button id="noBtn">NO</button>
+
+    </div>
+
+</div>
+
+
+<div id="envelopeScene" class="scene hidden">
+
+    <img src="envelop.jpg" id="envelope">
+
+    <p class="envelope-text">
+        Tap the letter...
+    </p>
+
+
+    <div id="letter" class="hidden">
+
+        <h1>For You❤️</h1>
+
+        <p>
+            I made this just for you.
+            <br><br>
+            Hope you are having the very best time..and great food..i won't say that i don't miss you but i will also not say that i miss you like i don't exactly know! what to say here but i just saw this many time on reels, so i thought to code this for you
+            <br>
+            "I hope this brings a smile to your face."<br>Toodles!
+        </p>
+
+    </div>
+
+</div></div><script src="script.js"></script>
+
+</body>
+</html>
